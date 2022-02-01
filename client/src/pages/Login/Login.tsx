@@ -9,6 +9,7 @@ import LoginForm from './LoginForm/LoginForm';
 import AuthHeader from '../../components/AuthHeader/AuthHeader';
 import { useAuth } from '../../context/useAuthContext';
 import { useSnackBar } from '../../context/useSnackbarContext';
+import logo from '../../Images/logo.png';
 
 export default function Login(): JSX.Element {
   const classes = useStyles();
@@ -37,7 +38,11 @@ export default function Login(): JSX.Element {
 
   return (
     <Grid container component="main" className={classes.root}>
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} square>
+      <Grid item xs={12} marginBottom={8} bgcolor={'white'} boxShadow={'light'} display={'inline-flex'}>
+        <img src={logo} width={200} height={50} />
+        <AuthHeader linkTo="/signup" asideText="Don't have an account?" btnText="sign up" />
+      </Grid>
+      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} marginBottom={20} square>
         <Box
           display="flex"
           justifyContent="space-between"
@@ -45,7 +50,6 @@ export default function Login(): JSX.Element {
           flexDirection="column"
           className={classes.authWrapper}
         >
-          <AuthHeader linkTo="/signup" asideText="Don't have an account?" btnText="Create account" />
           <Box width="100%" maxWidth={450} p={3} alignSelf="center">
             <Grid container>
               <Grid item xs>

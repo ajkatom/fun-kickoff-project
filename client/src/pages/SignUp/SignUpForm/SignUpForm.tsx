@@ -63,6 +63,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
               classes: { input: classes.inputs },
             }}
             name="username"
+            placeholder="Choose user name"
             autoComplete="username"
             autoFocus
             helperText={touched.username ? errors.username : ''}
@@ -82,6 +83,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
               classes: { input: classes.inputs },
             }}
             name="email"
+            placeholder="Enter email"
             autoComplete="email"
             helperText={touched.email ? errors.email : ''}
             error={touched.email && Boolean(errors.email)}
@@ -100,6 +102,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
               classes: { input: classes.inputs },
             }}
             type="password"
+            placeholder="Create password"
             autoComplete="current-password"
             helperText={touched.password ? errors.password : ''}
             error={touched.password && Boolean(errors.password)}
@@ -108,7 +111,7 @@ const SignUpForm = ({ handleSubmit }: Props): JSX.Element => {
           />
 
           <Box textAlign="center" marginTop={5}>
-            <Button type="submit" size="large" variant="contained" color="primary" className={classes.submit}>
+            <Button type="submit" size="large" variant="contained" color="secondary" className={classes.submit}>
               {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'Create'}
             </Button>
           </Box>
