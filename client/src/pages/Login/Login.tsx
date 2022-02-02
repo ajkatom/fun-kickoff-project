@@ -38,7 +38,7 @@ export default function Login(): JSX.Element {
   };
 
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid container component="main" overflow={'hidden'} className={classes.root}>
       {/* add img and style to the login nav abit (not on this ticket but need it visually ) */}
       <Grid item xs={12} marginBottom={8} bgcolor={'white'} boxShadow={'light'} display={'inline-flex'}>
         <Box paddingTop={3} marginLeft={3} paddingRight={45}>

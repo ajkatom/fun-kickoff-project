@@ -39,7 +39,7 @@ export default function Register(): JSX.Element {
   };
 
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid container component="main" overflow={'hidden'} className={classes.root}>
       <Grid item xs={12} marginBottom={8} bgcolor={'white'} boxShadow={'light'} display={'inline-flex'}>
         <Box paddingTop={3} marginLeft={3} paddingRight={45}>
           <img src={logo} width={150} height={30} />
