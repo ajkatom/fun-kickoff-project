@@ -46,6 +46,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
     >
       {({ handleSubmit, handleChange, values, touched, errors, isSubmitting }) => (
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
+          {/* moved lables out of input fields to resemble mockup */}
           <Typography fontSize={10} fontWeight={'bolder'} className={classes.label}>
             EMAIL ADDRESS
           </Typography>

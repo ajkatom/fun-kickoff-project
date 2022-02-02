@@ -24,11 +24,6 @@ const useStyles = makeStyles(() => ({
     color: '#000000',
     fontWeight: 'bold',
   },
-  header: {
-    bgcolor: 'white',
-    boxShadow: 'light',
-    display: 'inline-flex',
-  },
 }));
 
 export default useStyles;

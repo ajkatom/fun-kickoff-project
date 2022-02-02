@@ -24,9 +24,6 @@ const useStyles = makeStyles(() => ({
     color: '#000000',
     fontWeight: 'bolder',
   },
-  footer: {
-    color: 'black',
-  },
 }));
 
 export default useStyles;

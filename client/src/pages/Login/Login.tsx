@@ -39,6 +39,7 @@ export default function Login(): JSX.Element {
 
   return (
     <Grid container component="main" className={classes.root}>
+      {/* add img and style nav abit (not on this ticket but need it visually ) */}
       <Grid item xs={12} marginBottom={8} bgcolor={'white'} boxShadow={'light'} display={'inline-flex'}>
         <Box paddingTop={3} marginLeft={3} paddingRight={25}>
           <img src={logo} width={150} height={30} />
@@ -67,6 +68,7 @@ export default function Login(): JSX.Element {
           </Box>
           <Box p={1} alignSelf="center" />
         </Box>
+        {/* added link to sign up page incase you are not a member */}
         <Box marginLeft={50}>
           <Typography fontWeight={'bolder'} fontSize={15} paddingTop={10} paddingBottom={10}>
             Not a member?{' '}

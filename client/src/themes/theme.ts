@@ -10,6 +10,7 @@ export const theme = createTheme({
     },
   },
   palette: {
+    //added secondery color to match red from the mock up
     primary: { main: '#3A8DFF' },
     secondary: { main: '#f14140' },
   },

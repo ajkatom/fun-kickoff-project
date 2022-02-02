@@ -68,6 +68,7 @@ export default function Register(): JSX.Element {
           </Box>
           <Box p={1} alignSelf="center" />
         </Box>
+        {/* added link to login page incase you are a member */}
         <Box marginLeft={50}>
           <Typography fontWeight={'bolder'} fontSize={15} paddingTop={10} paddingBottom={10}>
             Already a member?{' '}
