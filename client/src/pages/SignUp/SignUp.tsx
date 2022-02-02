@@ -10,6 +10,7 @@ import AuthHeader from '../../components/AuthHeader/AuthHeader';
 import { useAuth } from '../../context/useAuthContext';
 import { useSnackBar } from '../../context/useSnackbarContext';
 import logo from '../../Images/logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Register(): JSX.Element {
   const classes = useStyles();
@@ -40,12 +41,14 @@ export default function Register(): JSX.Element {
   return (
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12} marginBottom={8} bgcolor={'white'} boxShadow={'light'} display={'inline-flex'}>
-        <Box paddingTop={3}>
-          <img src={logo} width={200} height={30} />
+        <Box paddingTop={3} marginLeft={3} paddingRight={25}>
+          <img src={logo} width={150} height={30} />
         </Box>
-        <AuthHeader linkTo="/login" asideText="Already have an account?" btnText="Login" />
+        <Box marginLeft={25}>
+          <AuthHeader linkTo="/login" asideText="Already have an account?" btnText="Login" />
+        </Box>
       </Grid>
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} square>
+      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} marginBottom={20} square>
         <Box
           display="flex"
           justifyContent="space-between"
@@ -56,14 +59,22 @@ export default function Register(): JSX.Element {
           <Box width="100%" maxWidth={450} p={3} alignSelf="center">
             <Grid container>
               <Grid item xs>
-                <Typography className={classes.welcome} component="h1" variant="h5">
-                  Create an account
+                <Typography fontWeight={'bolder'} className={classes.welcome} component="h1" variant="h5">
+                  Sign up
                 </Typography>
               </Grid>
             </Grid>
             <SignUpForm handleSubmit={handleSubmit} />
           </Box>
           <Box p={1} alignSelf="center" />
+        </Box>
+        <Box marginLeft={50}>
+          <Typography fontWeight={'bolder'} fontSize={15} paddingTop={10} paddingBottom={10}>
+            Already a member?{' '}
+            <Link to="/Login" color={'#f14140'}>
+              login
+            </Link>
+          </Typography>
         </Box>
       </Grid>
     </Grid>

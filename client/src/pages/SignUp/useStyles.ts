@@ -18,11 +18,14 @@ const useStyles = makeStyles(() => ({
     paddingTop: 23,
   },
   welcome: {
-    paddingLeft: 120,
+    paddingLeft: 160,
     fontSize: 26,
     paddingBottom: 20,
     color: '#000000',
-    fontWeight: 700,
+    fontWeight: 'bolder',
+  },
+  footer: {
+    color: 'black',
   },
 }));
 

@@ -10,15 +10,24 @@ const useStyles = makeStyles(() => ({
     },
   },
   authWrapper: {
+    display: 'flex',
+    lignItems: 'flex-start',
+    justifyContent: 'space-between',
+    flexDirection: 'column',
     minHeight: '100vh',
     paddingTop: 23,
   },
   welcome: {
-    paddingLeft: 120,
-    fontSize: 26,
+    paddingLeft: 150,
+    fontSize: 40,
     paddingBottom: 20,
     color: '#000000',
-    fontWeight: 700,
+    fontWeight: 'bold',
+  },
+  header: {
+    bgcolor: 'white',
+    boxShadow: 'light',
+    display: 'inline-flex',
   },
 }));
 
