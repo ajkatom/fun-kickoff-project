@@ -41,14 +41,14 @@ export default function Register(): JSX.Element {
   return (
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12} marginBottom={8} bgcolor={'white'} boxShadow={'light'} display={'inline-flex'}>
-        <Box paddingTop={3} marginLeft={3} paddingRight={25}>
+        <Box paddingTop={3} marginLeft={3} paddingRight={45}>
           <img src={logo} width={150} height={30} />
         </Box>
         <Box marginLeft={25}>
           <AuthHeader linkTo="/login" asideText="Already have an account?" btnText="Login" />
         </Box>
       </Grid>
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} marginBottom={20} square>
+      <Grid item xs={12} sm={8} md={8} height={600} elevation={8} component={Paper} marginBottom={40} square>
         <Box
           display="flex"
           justifyContent="space-between"
@@ -67,15 +67,15 @@ export default function Register(): JSX.Element {
             <SignUpForm handleSubmit={handleSubmit} />
           </Box>
           <Box p={1} alignSelf="center" />
-        </Box>
-        {/* added link to login page incase you are a member */}
-        <Box marginLeft={50}>
-          <Typography fontWeight={'bolder'} fontSize={15} paddingTop={10} paddingBottom={10}>
-            Already a member?{' '}
-            <Link to="/Login" color={'#f14140'}>
-              login
-            </Link>
-          </Typography>
+          {/* added link to login page incase you are a member */}
+          <Box marginLeft={65}>
+            <Typography fontWeight={'bolder'} fontSize={15} paddingTop={10} paddingBottom={500}>
+              Already a member?{' '}
+              <Link to="/Login" color={'#f14140'}>
+                login
+              </Link>
+            </Typography>
+          </Box>
         </Box>
       </Grid>
     </Grid>

@@ -39,16 +39,16 @@ export default function Login(): JSX.Element {
 
   return (
     <Grid container component="main" className={classes.root}>
-      {/* add img and style nav abit (not on this ticket but need it visually ) */}
+      {/* add img and style to the login nav abit (not on this ticket but need it visually ) */}
       <Grid item xs={12} marginBottom={8} bgcolor={'white'} boxShadow={'light'} display={'inline-flex'}>
-        <Box paddingTop={3} marginLeft={3} paddingRight={25}>
+        <Box paddingTop={3} marginLeft={3} paddingRight={45}>
           <img src={logo} width={150} height={30} />
         </Box>
         <Box marginLeft={25}>
           <AuthHeader linkTo="/signup" asideText="Don't have an account?" btnText="sign up" />
         </Box>
       </Grid>
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} marginBottom={20} square>
+      <Grid item xs={12} sm={8} md={7} elevation={6} height={600} component={Paper} marginBottom={20} square>
         <Box
           display="flex"
           justifyContent="space-between"
@@ -67,15 +67,15 @@ export default function Login(): JSX.Element {
             <LoginForm handleSubmit={handleSubmit} />
           </Box>
           <Box p={1} alignSelf="center" />
-        </Box>
-        {/* added link to sign up page incase you are not a member */}
-        <Box marginLeft={50}>
-          <Typography fontWeight={'bolder'} fontSize={15} paddingTop={10} paddingBottom={10}>
-            Not a member?{' '}
-            <Link to="/SignUp" color={'#f14140'}>
-              sign up
-            </Link>
-          </Typography>
+          {/* added link to sign up page incase you are not a member */}
+          <Box marginLeft={55}>
+            <Typography fontWeight={'bolder'} fontSize={15} paddingTop={10} paddingBottom={500}>
+              Not a member?{' '}
+              <Link to="/SignUp" color={'#f14140'}>
+                sign up
+              </Link>
+            </Typography>
+          </Box>
         </Box>
       </Grid>
     </Grid>

@@ -13,6 +13,9 @@ export const theme = createTheme({
     //added secondery color to match red from the mock up
     primary: { main: '#3A8DFF' },
     secondary: { main: '#f14140' },
+    action: {
+      selected: '#f14140',
+    },
   },
   shape: {
     borderRadius: 5,
