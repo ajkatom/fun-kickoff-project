@@ -48,7 +48,7 @@ export default function Register(): JSX.Element {
           <AuthHeader linkTo="/login" asideText="Already have an account?" btnText="Login" />
         </Box>
       </Grid>
-      <Grid item xs={12} sm={8} md={8} height={600} elevation={8} component={Paper} marginBottom={40} square>
+      <Grid item xs={12} sm={8} md={7} height={600} elevation={8} component={Paper} marginBottom={40} square>
         <Box
           display="flex"
           justifyContent="space-between"
