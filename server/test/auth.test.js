@@ -64,7 +64,7 @@ describe('auth', () => {
     };
     chai
       .request(server)
-      .post(`/auth/login`)
+      .post('/auth/login')
       .send(loginInfo)
       .end((err, res) => {
         res.should.have.status(200);
@@ -117,4 +117,14 @@ describe('auth', () => {
   //         });
   //     });
   // });
+  it('should logout', (done) => {
+    chai
+      .request(server)
+      .get('/auth/logout')
+      .end((err, res) => {
+        res.should.be.status(200)
+        console.log(res.text);
+        done();
+      });
+  });
 });
