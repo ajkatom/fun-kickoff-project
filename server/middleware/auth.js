@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const protect = (req, res, next) => {
-  const token = req.headers.cookies;
+  const token = req.headers.cookies; //req.cookies doesnt seem to exist changed to req.headers.cookies
 
   if (!token) {
     return res.status(401).send('No token, authorization denied');
