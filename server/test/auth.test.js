@@ -68,6 +68,10 @@ describe('auth', () => {
       .send(loginInfo)
       .end((err, res) => {
         res.should.have.status(200);
+        res.body.success.user.should.be.a('object');
+        res.body.success.user.should.have.property('username');
+        res.body.success.user.should.have.property('email');
+        res.body.success.user.should.have.property('id');
         done();
       });
   });
