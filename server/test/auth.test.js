@@ -1,4 +1,5 @@
 const chai = require('chai');
+const { expect } = require('chai');
 const chaiHttp = require('chai-http');
 const { app, server } = require('../app.js');
 const User = require('../models/User');
@@ -90,39 +91,42 @@ describe('auth', () => {
         done();
       });
   });
-  // it('should load user data if user successfully logged in', (done) => {
-  //   const loginInfo = {
-  //     email: 'john@john.com',
-  //     password: 'abcd1234',
-  //   };
-  //   chai
-  //     .request(server)
-  //     .post(`/auth/login`)
-  //     .send(loginInfo)
-  //     .end((err, res) => {
-  //       const setCookie = res.headers['set-cookie'][0];
-  //       const tempArryOne = setCookie.split('=');
-  //       const tempArryTwo = tempArryOne[1].split(';');
-  //       const token = tempArryTwo[0];
-  //       chai
-  //         .request(server)
-  //         .get('/auth/user')
-  //         .set('Authorization', token)
-  //         .end((err, res) => {
-  //           console.log(res);
-  //           // res.body.success.user.should.be.a('object');
-  //           // res.body.user.should.have.property('username');
-  //           // res.body.user.should.have.property('email');
-  //           done();
-  //         });
-  //     });
-  // });
+  it('should load user data if user successfully logged in', (done) => {
+    const loginInfo = {
+      email: 'john@john.com',
+      password: 'abcd1234',
+    };
+    chai
+      .request(server)
+      .post(`/auth/login`)
+      .send(loginInfo)
+      .end((err, res) => {
+        const setCookie = res.headers['set-cookie'][0];
+        const tempArryOne = setCookie.split('=');
+        const tempArryTwo = tempArryOne[1].split(';');
+        const token = tempArryTwo[0];
+        chai
+          .request(server)
+          .get('/auth/user')
+          .set('cookies', token)
+          .end((err, res) => {
+            res.body.success.user.should.be.a('object');
+            res.body.success.user.should.have.property('id');
+            res.body.success.user.should.have.property('username');
+            res.body.success.user.should.have.property('email');
+            expect(res.body.success.user.username).to.be.equal('John');
+            expect(res.body.success.user.email).to.be.equal('john@john.com');
+
+            done();
+          });
+      });
+  });
   it('should logout', (done) => {
     chai
       .request(server)
       .get('/auth/logout')
       .end((err, res) => {
-        res.should.be.status(200)
+        res.should.be.status(200);
         console.log(res.text);
         done();
       });
