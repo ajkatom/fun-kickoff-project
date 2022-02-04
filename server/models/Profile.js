@@ -18,7 +18,7 @@ const profileSchema = new mongoose.Schema({
     required: true,
   },
   availability: {
-    type: [{ Date }],
+    type: [{ date: Date, time: String }],
     required: true,
   },
   rating: {
