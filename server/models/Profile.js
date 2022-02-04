@@ -26,6 +26,14 @@ const profileSchema = new mongoose.Schema({
     max: 5,
     required: true,
   },
+  location: {
+    type: String,
+    required: true,
+  },
+  rate: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = Profile = mongoose.model('profile', profileSchema);
