@@ -34,6 +34,7 @@ const profileSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 });
 
 module.exports = Profile = mongoose.model('profile', profileSchema);
