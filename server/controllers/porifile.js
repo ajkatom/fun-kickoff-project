@@ -15,6 +15,7 @@ exports.createProfile = asyncHandler(async (req, res) => {
     user,
   } = req.body;
 
+  //checking if the user already created a profile before
   const userProfileExists = await Profile.findOne({ user: user });
 
   if (userProfileExists) {
