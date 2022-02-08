@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
   authHeader: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
     flexWrap: 'wrap',
   },
   accAside: {
