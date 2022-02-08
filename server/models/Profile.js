@@ -14,7 +14,7 @@ const profileSchema = new mongoose.Schema({
     required: true,
   },
   image: {
-    type: String, //to store image url
+    type: String,
     required: true,
   },
   availability: {
@@ -31,7 +31,7 @@ const profileSchema = new mongoose.Schema({
     required: true,
   },
   rate: {
-    type: String,
+    type: Number,
     required: true,
   },
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },

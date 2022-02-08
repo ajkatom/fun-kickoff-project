@@ -15,7 +15,6 @@ exports.createProfile = asyncHandler(async (req, res) => {
     user,
   } = req.body;
 
-  //checking if the user already created a profile before
   const userProfileExists = await Profile.findOne({ user: user });
 
   if (userProfileExists) {
@@ -53,7 +52,7 @@ exports.createProfile = asyncHandler(async (req, res) => {
       },
     });
   } else {
-    res.status(400);
+    res.status(500);
     throw new Error('Invalid profile data');
   }
 });
@@ -72,7 +71,7 @@ exports.findAllProfiles = asyncHandler(async (req, res) => {
 exports.updateProfile = asyncHandler(async (req, res) => {
   const profile = Profile.findById(req.params.id);
   if (profile) {
-    const updatedProfile = Object.assign(profile, req.body).save();
+    const updatedProfile = await profile.updateOne(req.body);
     res.status(200);
     res.json({ message: 'Profile updated', updatedProfile });
   } else {
@@ -82,7 +81,7 @@ exports.updateProfile = asyncHandler(async (req, res) => {
   exports.deleteProfile = asyncHandler(async (req, res) => {
     const profile = Profile.findById(req.params.id);
     if (profile) {
-      Profile.remove({ _id: profile._id });
+      Profile.deleteOne({ _id: profile._id });
       res.json('Profile deleted');
     } else {
       res.status(500);

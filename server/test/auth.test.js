@@ -127,6 +127,7 @@ describe('auth', () => {
       .get('/auth/logout')
       .end((err, res) => {
         res.should.be.status(200);
+        res.text.should.be.equal.to('You have successfully logged out');
         console.log(res.text);
         done();
       });
