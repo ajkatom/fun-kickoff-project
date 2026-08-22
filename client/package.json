@@ -23,7 +23,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "socket.io-client": "^4.3.2",
     "typescript": "^4.4.4",
     "use-debounce": "^7.0.1",
@@ -73,5 +73,25 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "overrides": {
+    "@tootallnate/once": "^2.0.1",
+    "cross-spawn": "^7.0.6",
+    "nth-check": "^2.1.1",
+    "postcss": "^8.5.26",
+    "serialize-javascript": "^7.0.5",
+    "svgo": "^2.8.3",
+    "uuid": "^11.1.1",
+    "webpack-dev-server": "^5.2.6"
+  },
+  "resolutions": {
+    "@tootallnate/once": "^2.0.1",
+    "cross-spawn": "^7.0.6",
+    "nth-check": "^2.1.1",
+    "postcss": "^8.5.26",
+    "serialize-javascript": "^7.0.5",
+    "svgo": "^2.8.3",
+    "uuid": "^11.1.1",
+    "webpack-dev-server": "^5.2.6"
   }
 }
