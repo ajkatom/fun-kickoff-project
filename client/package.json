@@ -18,7 +18,7 @@
     "@types/react-dom": "^17.0.11",
     "body-parser": "^1.19.0",
     "clsx": "^1.1.1",
-    "eslint": "^7.26.0",
+    "eslint": "^8.57.1",
     "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -60,7 +60,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.0.2",
+    "lint-staged": "^16.4.0",
     "prettier": "^2.4.1"
   },
   "lint-staged": {
@@ -76,9 +76,11 @@
   },
   "overrides": {
     "@tootallnate/once": "^2.0.1",
+    "argparse": "^2.0.1",
     "cross-spawn": "^7.0.6",
     "nth-check": "^2.1.1",
     "postcss": "^8.5.26",
+    "postcss-selector-parser": "^7.1.6",
     "serialize-javascript": "^7.0.5",
     "svgo": "^2.8.3",
     "uuid": "^11.1.1",
@@ -86,9 +88,11 @@
   },
   "resolutions": {
     "@tootallnate/once": "^2.0.1",
+    "argparse": "^2.0.1",
     "cross-spawn": "^7.0.6",
     "nth-check": "^2.1.1",
     "postcss": "^8.5.26",
+    "postcss-selector-parser": "^7.1.6",
     "serialize-javascript": "^7.0.5",
     "svgo": "^2.8.3",
     "uuid": "^11.1.1",
